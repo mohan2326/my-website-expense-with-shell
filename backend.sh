@@ -86,6 +86,7 @@ mysql -h db.mohansaivenna.cloud -uroot -p${mysql_root_password} < /app/schema/ba
 #systemctl restart backend &>>$LOGFILE
 
 
+
 #In this case; since we put the set -e shell thinks it a error and errores out so we have in advance add the user 
 # Output:
 #     [ ec2-user@ip-172-31-22-49 ~/my-website-expense-with-shell ]$ sudo sh backend.sh
