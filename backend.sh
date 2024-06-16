@@ -89,7 +89,7 @@ mysql -h db.mohansaivenna.cloud -uroot -p${mysql_root_password} < /app/schema/ba
 
 ping -c 3 db.mohansaivenna.cloud &>>$LOGFILE
 
-telnet db.mohansaivenna.cloud 3306 &>>$LOGFILE
+#telnet db.mohansaivenna.cloud 3306 &>>$LOGFILE
 
 netstat -lntp &>>$LOGFILE
 
