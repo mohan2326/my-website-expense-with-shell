@@ -81,10 +81,6 @@ systemctl start backend &>>$LOGFILE
 
 dnf install mysql -y &>>$LOGFILE
 
-systemctl enable mysqld &>>$LOGFILE
-
-systemctl start mysqld &>>$LOGFILE
-
 mysql -h db.mohansaivenna.cloud -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>$LOGFILE
 
 systemctl restart backend &>>$LOGFILE
