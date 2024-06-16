@@ -28,6 +28,8 @@ systemctl status nginx &>>$LOGFILE
 
 ps -ef |grep nginx &>>$LOGFILE
 
-telnet backend.mohansaivenna.cloud 8080 &>>$LOGFILE
+#telnet backend.mohansaivenna.cloud 8080 &>>$LOGFILE
+
+ping -c 3 backend.mohansaivenna.cloud &>>$LOGFILE
 
 ping -c 3 mohansaivenna.cloud &>>$LOGFILE
