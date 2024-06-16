@@ -79,12 +79,21 @@ systemctl enable backend &>>$LOGFILE
 
 systemctl start backend &>>$LOGFILE
 
+systemctl status backend &>>$LOGFILE
+
 dnf install mysql -y &>>$LOGFILE
 
 mysql -h db.mohansaivenna.cloud -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>$LOGFILE
 
 #systemctl restart backend &>>$LOGFILE
 
+ping -c 3 db.mohansaivenna.cloud &>>$LOGFILE
+
+telnet db.mohansaivenna.cloud 3306 &>>$LOGFILE
+
+netstat -lntp &>>$LOGFILE
+
+ps -ef | grep node &>>$LOGFILE
 
 
 #In this case; since we put the set -e shell thinks it a error and errores out so we have in advance add the user 
