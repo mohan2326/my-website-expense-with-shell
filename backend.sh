@@ -88,3 +88,14 @@ systemctl start mysqld &>>$LOGFILE
 mysql -h db.mohansaivenna.cloud -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>$LOGFILE
 
 systemctl restart backend &>>$LOGFILE
+
+
+#In this case; since we put the set -e shell thinks it a error and errores out so we have in advance add the user 
+# Output:
+#     [ ec2-user@ip-172-31-22-49 ~/my-website-expense-with-shell ]$ sudo sh backend.sh
+#     You are super user.
+#     Please enter DB password:
+#     Error occured at line number: 55, error command: id expense &>> $LOGFILE
+
+#     3.91.84.17 | 172.31.22.49 | t2.micro | https://github.com/mohan2326/my-website-expense-with-shell.git
+#     [ ec2-user@ip-172-31-22-49 ~/my-website-expense-with-shell ]$ sudo useradd expense
