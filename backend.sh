@@ -83,7 +83,7 @@ dnf install mysql -y &>>$LOGFILE
 
 mysql -h db.mohansaivenna.cloud -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>$LOGFILE
 
-systemctl restart backend &>>$LOGFILE
+#systemctl restart backend &>>$LOGFILE
 
 
 #In this case; since we put the set -e shell thinks it a error and errores out so we have in advance add the user 
