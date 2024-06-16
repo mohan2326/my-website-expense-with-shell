@@ -25,6 +25,9 @@ else
     echo -e "MySQL Root password is already setup...$Y SKIPPING $N"
 fi
 
+netstat -lntp &>>$LOGFILE
+
+ps -ef | grep mysql &>>$LOGFILE
 
 # idempotency
 # ----------------
